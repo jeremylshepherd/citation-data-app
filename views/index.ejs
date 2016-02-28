@@ -2,27 +2,39 @@
 
   <head>
 
-    <title>Jeremy L. Shepherd |Timestamp API</title>
+    <title>Jeremy L. Shepherd | Citation App API</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
         <div class="container">
             <h1 class="header">
-                API Basejump: Request Header parser microservice
+                API Basejump: Citation DB microservice
             </h1>
             <blockquote>
                 User story:
-                <ul>I can get the IP address, language and operating system for my browser.</ul>
+                <ul>
+                  <li>I can see a complete list of citations in the database.</li>
+                  <li>If authenticated, I can add additional citations into the datbase.</li>
+                  <li>I can search for specific criteria to locate a vehicle previously cited.</li>
+                </ul>
             </blockquote>
             <h3>Example usage:</h3>
-            <code>https://lit-atoll-7887.herokuapp.com/api/whoami</code><br>
+            <code>https://lit-atoll-7887.herokuapp.com/api/citations</code><br>
             <h3>Example output:</h3>
             <code>
                 {
-                  "ipaddress": 127.0.0.1,
-                  "language": "en-US",
-                  "software": "Windows NT 6.1; WOW64"
+                  "tag":"ZX29JO",
+                  "make":"Volvo",
+                  "year":2005,
+                  "color":"Red",
+                  "state":"OH",
+                  "violation":2,
+                  "location":"There",
+                  "date":"3/20/2013",
+                  "time":"10:96",
+                  "officer":"Barney Fife",
+                  "unit":6
                 }
             </code>
         </div>

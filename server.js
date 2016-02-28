@@ -1,10 +1,21 @@
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
+var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 
 var app = express();
+
+//Mongo Connection
+mongoose.connect('mongodb://localhost/citationapp', function(err, db) {
+  if(err) {console.log(err);}
+
+  console.log('Connected to citationapp');
+});
+
+//Necessary for Routes index to find model
+require('./models/Citations');
 
 var routes = require('./routes/index');
 
